@@ -141,7 +141,7 @@ p {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     margin: 6px;
     cursor: pointer;
 }
@@ -384,7 +384,7 @@ textarea {
     }
     #tm-main-nav {
         position: fixed;
-        top: 50px;
+        top: 30px;
         right: 40px;
         padding-bottom: 0;
     }
@@ -392,13 +392,14 @@ textarea {
         flex-direction: column;
     }
     .tm-bg-left {
+        display: none;
         height: 200px;
-        border-bottom: 50px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 50px solid rgba(0, 0, 0, 0.7);
         border-right: 0;
         border-top: 0;
     }
     .tm-bg-right {
-        height: calc(100% - 200px);
+        height: calc(100%);
     }
     .tm-bg-controls-wrapper {
         margin-left: 0;
