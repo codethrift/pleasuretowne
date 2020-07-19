@@ -49,7 +49,8 @@ p {
 }
 
 .tm-logo {
-    margin-right: 20px;
+    margin-right: 10px;
+    width: 50px;
 }
 
 .tm-slogan {
@@ -64,7 +65,7 @@ p {
     border: 0;
     border-radius: 0;
     transform: skewX(-15deg);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(238, 56, 133);
     color: white;
 }
 
