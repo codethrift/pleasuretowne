@@ -26,7 +26,7 @@
         gtag('config', 'UA-5537804-5');
     </script>
 
-    <script src="//load.sumome.com/" data-sumo-site-id="73f97d0a09db3b901ad26511c606ba6e8878b535579c10b9677c05395952cf8f" async="async"></script>
+    <script src="https://load.sumome.com/" data-sumo-site-id="73f97d0a09db3b901ad26511c606ba6e8878b535579c10b9677c05395952cf8f" async="async"></script>
 </head>
 
 <body>
@@ -54,6 +54,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="mailto:pleasuretowne@gmail.com" target="_blank">Contact</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="https://www.instagram.com/PleasureTowne/" target="_blank">Instagram</a>
+                                </li>                                
                                 <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="https://www.facebook.com/PleasureTowne-174064745972761/" target="_blank">Facebook</a>
                                 </li>
@@ -122,10 +125,22 @@
             upcoming: true,
             upcomingHeading: '<h2>Upcoming Shows</h2>',
             format: ['*summary*', ' — ', '*description*', '<br>', '*date*']
-        });
+        });  
+        
+        window.onload = function () {
+            setTimeout(function () {
+                var spans = document.querySelectorAll("span.date");
+                for (var span of spans) {
+                    var text = span.textContent;
+                    var newText = text.replace(/\s-\s\d{1,2}:\d{2}[AP]M$/, "").replace(/from/i, " - ");
+                    span.textContent = newText;
+                }  
+            }, 5);
+        };
+    
     </script>
     <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
+        document.getElementById("year").innerHTML = new Date().getFullYear();     
     </script>
 </body>
 
